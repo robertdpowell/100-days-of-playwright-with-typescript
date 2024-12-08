@@ -3,5 +3,6 @@
     "extensions": [
       "GitHub.copilot",
       "ms-playwright.playwright"
-    ]
+    ],
+    "forwardPorts": [9323]
   }
