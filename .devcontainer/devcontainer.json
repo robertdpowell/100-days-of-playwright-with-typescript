@@ -1,14 +1,10 @@
 {
-    "name": "My Codespace",
-    "extensions": [
-      "GitHub.copilot",
-      "ms-playwright.playwright"
-    ],
-    "forwardPorts": [9323],
-    "postCreateCommand": "npm install && npx playwright install",
-    "features": {
-    "ghcr.io/devcontainers/features/apt-get-packages:1": {
-      "packages": "libwoff1,libopus0,libwebpdemux2,libharfbuzz-icu0,libwebpmux3,libenchant-2-2,libhyphen0,libegl1,libglx0,libgudev-1.0-0,libevdev2,libgles2,libx264-155"
-    }
-  }
+  "name": "My Codespace",
+  "image": "mcr.microsoft.com/playwright:v1.49.0",
+  "extensions": [
+    "GitHub.copilot",
+    "ms-playwright.playwright"
+  ],
+  "forwardPorts": [9323],
+  "postCreateCommand": "npm install && npx playwright install"
 }
