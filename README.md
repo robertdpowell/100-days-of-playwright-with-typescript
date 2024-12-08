@@ -95,6 +95,8 @@ After reading the docs, it seems that in a GitHub Codespace, the default network
 npx playwright test --ui-host=0.0.0.0
 ```
 
+![alt text](<Screenshot 2024-12-08 at 21.31.27.png>)
+
 ## Day 2
 
 
