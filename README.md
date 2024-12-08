@@ -37,7 +37,7 @@ At the installation prompts, I chose the following options
 
 ### Running my first test
 
-The Playwright installation provides an example test suite of 6 tests.
+The Playwright installation provides an example test suite consistig of 2 tests, each of which is configured to run in 3 browsers (so 6 tests in total).
 
 ```
 import { test, expect } from '@playwright/test';
