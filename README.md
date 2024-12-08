@@ -37,7 +37,7 @@ At the installation prompts, I chose the following options
 
 ### Running my first test
 
-The Playwright installation provides an example test suite consistig of 2 tests, each of which is configured to run in 3 browsers (so 6 tests in total).
+The Playwright installation provides an example test suite consisting of 2 tests, each of which is configured to run in 3 browsers (so 6 tests in total).
 
 ```
 import { test, expect } from '@playwright/test';
@@ -60,7 +60,7 @@ test('get started link', async ({ page }) => {
 });
 ```
 
-To check my setup, I ran these tests using the following command
+To check my setup, I ran these example tests using the following command
 
 ```
 npx playwright test
@@ -73,12 +73,12 @@ Running 6 tests using 1 worker
 
 ```
 
-To see the details of the test run, I ran:
+To see the results of the test run, I ran:
 
 ```
 npx playwright show-report
 ```
 
-And I get this nice HTML overview of the 6 tests that ran.
+Which took me to this HTML overview of the 6 tests that ran.
 
 ![alt text](<Screenshot 2024-12-08 at 19.23.49.png>)
