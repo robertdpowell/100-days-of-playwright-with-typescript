@@ -1,10 +1,14 @@
 {
   "name": "My Codespace",
   "image": "mcr.microsoft.com/playwright:v1.49.0",
-  "extensions": [
-    "GitHub.copilot",
-    "ms-playwright.playwright"
-  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "ms-playwright.playwright"
+      ]
+    }
+  },
   "forwardPorts": [9323],
   "postCreateCommand": "npm install && npx playwright install"
 }
