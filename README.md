@@ -85,10 +85,6 @@ Which took me to this HTML overview of the 6 tests that ran.
 
 Finally, I ran the same tests with UI mode to get a first glimpse of the UI testing interface.
 
-```
-npx playwright test --ui-host=0.0.0.0
-```
-
 After reading the docs, it seems that in a GitHub Codespace, the default network configuration doesn’t bind the Playwright Test Runner UI to an external interface, so you need to explicitly bind it to 0.0.0.0 to make it accessible.
 
 ```
@@ -98,5 +94,4 @@ npx playwright test --ui-host=0.0.0.0
 ![alt text](<Screenshot 2024-12-08 at 21.31.27.png>)
 
 ## Day 2
-
 
