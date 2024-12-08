@@ -37,7 +37,7 @@ At the installation prompts, I chose the following options
 
 ### Running my first test
 
-The Playwright installation provides an example test suite consisting of 2 tests, each of which is configured to run in 3 browsers (so 6 tests in total).
+The Playwright installation provides an example test suite (*example.spec.ts*) consisting of 2 tests, each of which is configured to run in 3 browsers (so 6 tests in total).
 
 ```
 import { test, expect } from '@playwright/test';
@@ -65,7 +65,7 @@ To check my setup, I ran these example tests using the following command
 ```
 npx playwright test
 ```
-All tests passed 
+All tests ran in **headless mode** and passed. 
 
 ```
 Running 6 tests using 1 worker
@@ -82,3 +82,16 @@ npx playwright show-report
 Which took me to this HTML overview of the 6 tests that ran.
 
 ![alt text](<Screenshot 2024-12-08 at 19.23.49.png>)
+
+Finally, I ran the same tests with UI mode to get a first glimpse of the UI testing interface.
+
+```
+npx playwright test --ui-host=0.0.0.0
+```
+
+After reading the docs, it seems that in a GitHub Codespace, the default network configuration doesn’t bind the Playwright Test Runner UI to an external interface, so you need to explicitly bind it to 0.0.0.0 to make it accessible.
+
+
+## Day 2
+
+
