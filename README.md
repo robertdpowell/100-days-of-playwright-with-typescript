@@ -2,23 +2,31 @@
 ### Setting up 
 I will be using Github Codespaces for this 100 day learning challenge. 
 
-So that each new codespace in my Github repository launches with the VSCode extensions that I will be working with, I created a devcontainer.json file. I expect this configuration file will expand over time, so this is just a start. 
+I started by creating a devcontainer.json file to configure the codespace at startup
 
 ```
 {
   "name": "My Codespace",
-  "extensions": [
-    "GitHub.copilot",
-    "ms-playwright.playwright"
-  ]
+  "image": "mcr.microsoft.com/playwright:v1.49.0", // Use the Playwright image from Microsoft as the base image
+  "customizations": {
+    "vscode": {
+      "extensions": [ // Include my favorite extensions
+        "GitHub.copilot",
+        "ms-playwright.playwright" 
+      ]
+    }
+  },
+  "forwardPorts": [9323], // Forward the Playwright server port 
+  "postCreateCommand": "npm install && npx playwright install"
 }
 ```
 
 After restarting my codespace and checking my extensions had installed correctly, it was time to install Playwright.
 
-'''
+```
 npm init playwright@latest
-'''
+```
+
 
 At the installation prompts, I chose the following options
 
@@ -57,27 +65,20 @@ To check my setup, I ran these tests using the following command
 ```
 npx playwright test
 ```
-
-The first 2 tests failed with the following error, while the final 4 passed. 
+All tests passed 
 
 ```
-    ╔══════════════════════════════════════════════════════╗
-    ║ Host system is missing dependencies to run browsers. ║
-    ║ Missing libraries:                                   ║
-    ║     libwoff2dec.so.1.0.2                             ║
-    ║     libopus.so.0                                     ║
-    ║     libwebpdemux.so.2                                ║
-    ║     libharfbuzz-icu.so.0                             ║
-    ║     libwebpmux.so.3                                  ║
-    ║     libenchant-2.so.2                                ║
-    ║     libhyphen.so.0                                   ║
-    ║     libEGL.so.1                                      ║
-    ║     libGLX.so.0                                      ║
-    ║     libgudev-1.0.so.0                                ║
-    ║     libevdev.so.2                                    ║
-    ║     libGLESv2.so.2                                   ║
-    ║     libx264.so                                       ║
-    ╚══════════════════════════════════════════════════════╝
-    ```
+Running 6 tests using 1 worker
+  6 passed (11.9s)
 
+```
 
+To see the details of the test run, I ran:
+
+```
+npx playwright show-report
+```
+
+And I get this nice HTML overview of the 6 tests that ran.
+
+![alt text](<Screenshot 2024-12-08 at 19.23.49.png>)
