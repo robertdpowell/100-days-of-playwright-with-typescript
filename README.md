@@ -1,6 +1,6 @@
 ## Day 1 
 ### Setting up 
-I will be using Github Codespaces for this 100 day learning challenge. 
+I will primarily be using Github Codespaces for this 100 day learning challenge. 
 
 I started by creating a devcontainer.json file to configure the codespace at startup
 
