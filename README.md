@@ -95,3 +95,38 @@ npx playwright test --ui-host=0.0.0.0
 
 ## Day 2
 
+I modified the example tests to run against one of my own hobby websites (https://tweetsinwelsh.com), to further understand what each test was doing. 
+
+- Navigate to a website
+- Ensure we land at the correct website by checking the website's title
+- Find a link on the page and click that link
+- Ensure we land at the correct linked page by checking for a header element.
+
+I learned how to change the timeout value to give the site enough time to load for test execution. The default timeout for Playwright is 30 seconds, and below I set it to 60 globally in the playwright.config.ts file. Setting it globally seems the better option, for maintainability and consistency reasons.
+
+```
+timeout: 60000,
+navigationTimeout: 60000,
+```
+**timeout**: A general timeout that applies to most actions in Playwright, such as waiting for an element to appear or a selector to match.
+
+**navigation timeout**: Specifically applies to navigation-related actions like page.goto() or page.waitForNavigation().
+
+
+
+To prep for Day 3, I asked ChatGPT to set me some challenges to automate. 
+
+We will be using the demo app https://demo.playwright.dev/todomvc
+
+My first challenge will be 
+
+```
+Add a Single Todo
+	•	Write a test that:
+	•	Navigates to the TodoMVC page.
+	•	Adds a single todo item (e.g., “Buy milk”).
+	•	Verifies that the new item appears in the list.
+```
+
+
+## Day 3
