@@ -135,3 +135,8 @@ My first challenge was
 	•	Marks the todo as completed.
 	•	Verifies that the item appears with a strikethrough.
 ```
+
+Found some useful links to use later in my learning.
+
+https://playwrightsolutions.com/playwright-login-test-with-2-factor-authentication-2fa-enabled/
+https://practicesoftwaretesting.com/
