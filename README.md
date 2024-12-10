@@ -113,20 +113,25 @@ navigationTimeout: 60000,
 **navigation timeout**: Specifically applies to navigation-related actions like page.goto() or page.waitForNavigation().
 
 
+## Day 3
 
-To prep for Day 3, I asked ChatGPT to set me some challenges to automate. 
+For Day 3, I asked ChatGPT to set me some challenges to automate. 
 
 We will be using the demo app https://demo.playwright.dev/todomvc
 
-My first challenge will be 
+My first challenge was
 
 ```
-Add a Single Todo
+	1.	Add a Single Todo
 	•	Write a test that:
 	•	Navigates to the TodoMVC page.
 	•	Adds a single todo item (e.g., “Buy milk”).
 	•	Verifies that the new item appears in the list.
+
+
+	2.	Mark a Todo as Completed
+	•	Write a test that:
+	•	Adds a todo item.
+	•	Marks the todo as completed.
+	•	Verifies that the item appears with a strikethrough.
 ```
-
-
-## Day 3
