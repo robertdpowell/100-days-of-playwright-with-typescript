@@ -122,21 +122,63 @@ We will be using the demo app https://demo.playwright.dev/todomvc
 My first challenge was
 
 ```
-	1.	Add a Single Todo
+	1.	Add a Single Todo [x] 
 	•	Write a test that:
 	•	Navigates to the TodoMVC page.
 	•	Adds a single todo item (e.g., “Buy milk”).
 	•	Verifies that the new item appears in the list.
 
 
-	2.	Mark a Todo as Completed
+	2.	Mark a Todo as Completed [x] 
 	•	Write a test that:
 	•	Adds a todo item.
 	•	Marks the todo as completed.
 	•	Verifies that the item appears with a strikethrough.
+
+  3.	Delete a Todo
+	•	Write a test that:
+	•	Adds a todo item.
+	•	Deletes the item.
+	•	Verifies that the item is no longer in the list.
+
 ```
+
 
 Found some useful links to use later in my learning.
 
 https://playwrightsolutions.com/playwright-login-test-with-2-factor-authentication-2fa-enabled/
 https://practicesoftwaretesting.com/
+
+## Day 4 
+
+Today's task involved passing in a set of data to a test and looping through it to perform the same action.
+
+
+```
+**Add multiple todos**
+	•	Write a test that:
+  	•	Adds three todos (e.g., “Buy milk,” “Read book,” “Go for a run”).
+	  •	Verifies that all three appear in the list.
+```
+
+
+```
+const TODO_ITEMS = [
+  'buy some cheese',
+  'feed the cat',
+  'book a doctors appointment'
+] as const;
+
+// Add multiple todos
+test('add multiple todos', async ({ page }) => {
+  await page.goto('https://demo.playwright.dev/todomvc');
+  await expect(page).toHaveTitle(/React • TodoMVC/);
+  for (const todo of TODO_ITEMS) {
+    await page.fill('.new-todo', todo + '\n');
+    await page.press('.new-todo', 'Enter');
+  }
+  await expect(page.locator('.todo-list li')).toHaveCount(TODO_ITEMS.length);
+});
+
+
+```
