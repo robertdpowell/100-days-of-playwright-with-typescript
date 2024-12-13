@@ -34,17 +34,10 @@ test('delete a todo', async ({ page }) => {
   await page.press('.new-todo', 'Enter');
   await page.hover('.todo-list li');
   await page.click('.todo-list li button.destroy');
-<<<<<<< HEAD
   await expect(page.locator('.todo-list li')).toBeHidden();
 });
 
 // Add multiple todos
-=======
-  await expect(page.locator('.todo-list li')).toBeHidden(); 
-});
-
-// Add multiple todos, close one and check that only 
->>>>>>> a00d966 (latest)
 test('add multiple todos', async ({ page }) => {
   await page.goto('https://demo.playwright.dev/todomvc');
   await expect(page).toHaveTitle(/React • TodoMVC/);

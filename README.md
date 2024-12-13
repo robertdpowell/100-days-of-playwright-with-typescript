@@ -182,3 +182,12 @@ test('add multiple todos', async ({ page }) => {
 
 
 ```
+
+## Day 5
+
+Experimented with running the tests on different browsers, using the project flag.
+
+```
+npx playwright test --project webkit --project firefox
+```
+
