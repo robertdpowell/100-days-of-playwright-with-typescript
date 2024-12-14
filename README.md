@@ -191,7 +191,7 @@ Experimented with running the tests on different browsers, using the project fla
 npx playwright test --project webkit --project firefox
 ```
 
-Used the axescore library to run some basic accessibility checks.
+Used the axebuilder library to run some basic accessibility checks.
 
 ```
 test.describe('homepage', () => { // 2
@@ -202,3 +202,12 @@ test.describe('homepage', () => { // 2
   });
 });
 ```
+
+## Day 6
+
+Wrote a test to locate an out of stock item, navigate to that item and check the 'add to cart' button is disabled.
+
+https://practicesoftwaretesting.com/product/01JF1ZF95MTYF6DTXQE5V2G4DC
+
+
+
