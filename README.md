@@ -210,4 +210,19 @@ Wrote a test to locate an out of stock item, navigate to that item and check the
 https://practicesoftwaretesting.com/product/01JF1ZF95MTYF6DTXQE5V2G4DC
 
 
+## Day 7
+
+Wrote a test to activate a product filter on the page.
+
+## Day 8
+
+Learned about mocking API tests with Playwright.
+
+https://dev.to/playwright/api-mocking-for-your-playwright-tests-47ah
+
+
+
+
+
+
 
