@@ -221,6 +221,11 @@ Learned about mocking API tests with Playwright.
 https://dev.to/playwright/api-mocking-for-your-playwright-tests-47ah
 
 
+## Day 9
+
+Reading more today about modifying API responses.
+
+
 
 
 
