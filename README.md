@@ -223,7 +223,7 @@ https://dev.to/playwright/api-mocking-for-your-playwright-tests-47ah
 
 ## Day 9
 
-Reading more today about modifying API responses.
+Reading more today about modifying API responses with Playwright.
 
 ```
 test('gets the json from api and adds a new fruit', async ({ page }) => {
