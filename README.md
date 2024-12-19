@@ -246,6 +246,10 @@ test('gets the json from api and adds a new fruit', async ({ page }) => {
 ```
 
 
+## Day 10
 
+Begin learning about page object models.
+
+Tomorrow, will build one.
 
 
